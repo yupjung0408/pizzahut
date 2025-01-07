@@ -18,9 +18,7 @@
                         </h1>
                         <ul class="button-set">
                             <li>
-                                <button type="button" class="btn-search">
-                                    <img src="./images/icon-search.svg" alt="검색" />
-                                </button>
+                                <a href="#"><img src="./images/icon-search.svg" alt="검색" /></a>
                             </li>
                             <li>
                                 <button type="button" class="btn-cart">
@@ -60,8 +58,8 @@
         <!-- //e: header -->
 
         <!-- s: main -->
-        <main id="main">
-            <ul class="sidebar">
+        <aside class="sidebar">
+            <ul>
                 <li>
                     <a href="#" class="store">매장찾기</a>
                 </li>
@@ -69,159 +67,188 @@
                     <a href="#" class="service">고객센터</a>
                 </li>
             </ul>
+        </aside>
 
+        <main id="main">
             <section>
-                <h2 class="sec-title">메인 비주얼</h2>
+                <h2 class="hidden">메인 비주얼</h2>
                 <figure><img src="./images/1920_800.png" alt="메인 비주얼" /></figure>
             </section>
 
             <!-- //e: 메인 비주얼 -->
             <section>
-                <h2 class="sec-title">주문 영역</h2>
-                <ul class="order">
-                    <li>
-                        <a href="#"><strong>배달주문</strong></a>
-                    </li>
-                    <li>
-                        <a href="#"><strong>마이오더</strong></a>
-                    </li>
-                    <li>
-                        <a href="#"><strong>포장주문</strong></a>
-                    </li>
-                </ul>
+                <div class="inner">
+                    <h2 class="hidden">주문 영역</h2>
+                    <ul class="order">
+                        <li>
+                            <a href="#">배달주문</a>
+                        </li>
+                        <li>
+                            <a href="#">마이오더</a>
+                        </li>
+                        <li>
+                            <a href="#">포장주문</a>
+                        </li>
+                    </ul>
+                </div>
             </section>
-
             <!-- //e: 주문 영역 -->
-            <section>
-                <h2 class="sec-title">Best Menu</h2>
 
-                <ul class="bestmenu-list">
-                    <li>
-                        <a href="#">
-                            <figure><img src="./images/menu-pizza1.png" alt="수퍼슈프림" /></figure>
-                            <div class="bestmenu-info">
-                                <dl class="bestmenu-title">
-                                    <dt>수퍼슈프림<br />SuperSupreme</dt>
-                                    <dd>오랫동안 사랑받아온 프리미엄 콤비네이션피자</dd>
-                                </dl>
-                                <p>33,900</p>
-                                <p>28,500</p>
-                                <p></p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <figure><img src="./images/menu-pizza2.png" alt="페페로니러버" /></figure>
-                            <div class="bestmenu-info">
-                                <dl class="bestmenu-title">
-                                    <dt>페페로니러버<br />PepperoniLover</dt>
-                                    <dd>고소하고 짭조름한 페페로니가 가득한 피자</dd>
-                                </dl>
-                                <p>25,900</p>
-                                <p>19,900</p>
-                                <p>10,900</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <figure><img src="./images/menu-pizza3.png" alt="씨푸드킹" /></figure>
-                            <div class="bestmenu-info">
-                                <dl class="bestmenu-title">
-                                    <dt>씨푸드킹<br />SeafoodKing</dt>
-                                    <dd>쫄깃한 통관자와 탱글탱글 통새우가 듬뿍 들어간 피자</dd>
-                                </dl>
-                                <p>36,900</p>
-                                <p>30,500</p>
-                                <p></p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <a href="#" class="more">VIEW MORE</a>
+            <section>
+                <div class="inner">
+                    <h2 class="sec-title">Best Menu</h2>
+                    <ul class="bestmenu-list">
+                        <li>
+                            <a href="#">
+                                <figure><img src="./images/menu-pizza1.png" alt="수퍼슈프림" /></figure>
+                                <div class="bestmenu-info">
+                                    <dl class="bestmenu-title">
+                                        <dt>수퍼슈프림</dt>
+                                        <dt>SuperSupreme</dt>
+                                        <dd>오랫동안 사랑받아온 프리미엄 콤비네이션피자</dd>
+                                        <dd>
+                                            <ul class="price">
+                                                <li><em>L</em>33,900</li>
+                                                <li><em>M</em>28,500</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./images/menu-pizza2.png" alt="페페로니러버" /></figure>
+                                <div class="bestmenu-info">
+                                    <dl class="bestmenu-title">
+                                        <dt>페페로니러버</dt>
+                                        <dt>PepperoniLover</dt>
+                                        <dd>고소하고 짭조름한 페페로니가 가득한 피자</dd>
+                                        <dd>
+                                            <ul class="price">
+                                                <li><em>L</em>25,900</li>
+                                                <li><em>M</em>19,900</li>
+                                                <li><em>S</em>10,900</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./images/menu-pizza3.png" alt="씨푸드킹" /></figure>
+                                <div class="bestmenu-info">
+                                    <dl class="bestmenu-title">
+                                        <dt>씨푸드킹</dt>
+                                        <dt>SeafoodKing</dt>
+                                        <dd>쫄깃한 통관자와 탱글탱글 통새우가 듬뿍 들어간 피자</dd>
+                                        <dd>
+                                            <ul class="price">
+                                                <li><em>L</em>36,900</li>
+                                                <li><em>M</em>30,500</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="more">VIEW MORE</a>
+                </div>
             </section>
             <!-- //e: 메뉴 소개 -->
+
             <section>
-                <h2 class="sec-title">브랜드 소개</h2>
+                <h2 class="hidden">브랜드 소개</h2>
 
                 <div class="brand-info">
-                    <strong>Taste the difference</strong>
-                    <h3>PIZZA HUT</h3>
-                    <p>
-                        고객이 가장 좋아하는 장소이자, 음식을 즐기는 최고의 방법이 되기 위해 <br />
-                        피자헛은 오늘도 노력합니다.
-                    </p>
+                    <div class="brand-info-con">
+                        <strong>Taste the difference</strong>
+                        <h3>PIZZA HUT</h3>
+                        <p>
+                            고객이 가장 좋아하는 장소이자, 음식을 즐기는 최고의 방법이 되기 위해 <br />
+                            피자헛은 오늘도 노력합니다.
+                        </p>
+                    </div>
                 </div>
 
-                <ol class="brand-info-history">
-                    <li>
-                        <figure><img src="./images/img_circle_1985.jpg" alt="#" /></figure>
-                        <p>최초로 <br />국내에 <br />피자 문화 보급</p>
-                        <strong>1985</strong>
-                    </li>
-                    <li>
-                        <figure><img src="./images/img_circle_1986.jpg" alt="#" /></figure>
-                        <p>최초로 <br />딜리버리 <br />서비스 시작</p>
-                        <strong>1986</strong>
-                    </li>
-                    <li>
-                        <figure><img src="./images/img_circle_1996.jpg" alt="#" /></figure>
-                        <p>최초로 <br />혁신적인 <br />엣지 피자 제공</p>
-                        <strong>1996</strong>
-                    </li>
-                    <li>
-                        <figure><img src="./images/img_circle_1997.jpg" alt="#" /></figure>
-                        <p>최초로 <br />핫파우치 <br />배달</p>
-                        <strong>1997</strong>
-                    </li>
-                    <li>
-                        <figure><img src="./images/img_circle_2011.jpg" alt="#" /></figure>
-                        <p>최초로 <br />통합 멤버십 <br />출시</p>
-                        <strong>2011</strong>
-                    </li>
-                    <li>
-                        <figure><img src="./images/img_circle_2012.jpg" alt="#" /></figure>
-                        <p>최초로 <br />박스제품 <br />출시</p>
-                        <strong>2012</strong>
-                    </li>
-                </ol>
+                <div class="inner">
+                    <ol class="brand-info-history">
+                        <li>
+                            <figure><img src="./images/img_circle_1985.jpg" alt="#" /></figure>
+                            <p>최초로 <br />국내에 <br />피자 문화 보급</p>
+                            <strong>1985</strong>
+                        </li>
+                        <li>
+                            <figure><img src="./images/img_circle_1986.jpg" alt="#" /></figure>
+                            <p>최초로 <br />딜리버리 <br />서비스 시작</p>
+                            <strong>1986</strong>
+                        </li>
+                        <li>
+                            <figure><img src="./images/img_circle_1996.jpg" alt="#" /></figure>
+                            <p>최초로 <br />혁신적인 <br />엣지 피자 제공</p>
+                            <strong>1996</strong>
+                        </li>
+                        <li>
+                            <figure><img src="./images/img_circle_1997.jpg" alt="#" /></figure>
+                            <p>최초로 <br />핫파우치 <br />배달</p>
+                            <strong>1997</strong>
+                        </li>
+                        <li>
+                            <figure><img src="./images/img_circle_2011.jpg" alt="#" /></figure>
+                            <p>최초로 <br />통합 멤버십 <br />출시</p>
+                            <strong>2011</strong>
+                        </li>
+                        <li>
+                            <figure><img src="./images/img_circle_2012.jpg" alt="#" /></figure>
+                            <p>최초로 <br />박스제품 <br />출시</p>
+                            <strong>2012</strong>
+                        </li>
+                    </ol>
+                </div>
             </section>
             <!-- //e: 브랜드 소개 -->
 
-            <section>
-                <h2 class="sec-title">news</h2>
-                <h3>NEWS</h3>
+            <section class="news">
+                <div class="inner">
+                    <h3>NEWS</h3>
 
-                <ul class="news-list">
-                    <li>
-                        <a href="#">
-                            <strong
-                                >피자헛,프리미엄 피자 찾아 우주로 <br />
-                                ...SF 영화 같은 광고</strong
-                            >
-                            <p>2024.12.20</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <strong>
-                                피자헛, 태국 대표 요리를 그대로... <br />
-                                ‘푸팟퐁커리 피자’ 출...
-                            </strong>
-                            <p>2024.11.20</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <strong
-                                >피자헛, 통새우 30마리 들어간 <br />
-                                ‘케이준 더블쉬림프 포켓’ ...</strong
-                            >
-                            <p>2024.10.11</p>
-                        </a>
-                    </li>
-                </ul>
+                    <!-- swiper.js -->
+
+                    <ul class="news-list">
+                        <li>
+                            <a href="#">
+                                <figure><img src="./images/news-pic1.png" alt="#" /></figure>
+                                <strong
+                                    >피자헛,프리미엄 피자 찾아 우주로 <br />
+                                    ...SF 영화 같은 광고</strong
+                                >
+                                <p>2024.12.20</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./images/news-pic2.png" alt="#" /></figure>
+                                <strong>
+                                    피자헛, 태국 대표 요리를 그대로... <br />
+                                    ‘푸팟퐁커리 피자’ 출...
+                                </strong>
+                                <p>2024.11.20</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./images/news-pic3.png" alt="#" /></figure>
+                                <strong
+                                    >피자헛, 통새우 30마리 들어간 <br />
+                                    ‘케이준 더블쉬림프 포켓’ ...</strong
+                                >
+                                <p>2024.10.11</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <!-- //e: 뉴스 -->
         </main>
@@ -231,7 +258,7 @@
         <!-- s: footer -->
         <footer id="footer">
             <div class="inner">
-                <div class="foot-logo"><img src="./images/logo-footer.png" alt="logo" /></div>
+                <div class="foot-logo"><img src="./images/logo-footer.png" alt="피자헛" /></div>
                 <div class="foot-text">
                     <ul class="foot-link">
                         <li><a href="#">이용약관</a></li>
@@ -254,21 +281,22 @@
                     </div>
                 </div>
                 <div class="foot-con">
-                    <button type="button" class="btn-top"><img src="./images/icon-up.png" alt="btn-top" /></button>
                     <ul class="foot-sns">
                         <li>
-                            <a href=""><img src="./images/icon-facebook.svg" alt="facebook" />facebook</a>
+                            <a href="#"><img src="./images/icon-facebook.svg" alt="facebook" /></a>
                         </li>
                         <li>
-                            <a href=""><img src="./images/icon-instagram.svg" alt="instagram" />instagram</a>
+                            <a href="#"><img src="./images/icon-instagram.svg" alt="instagram" /></a>
                         </li>
                         <li>
-                            <a href=""><img src="./images/icon-youtube.svg" alt="youtube" />youtube</a>
+                            <a href="#"><img src="./images/icon-youtube.svg" alt="youtube" /></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </footer>
         <!-- //e: footer -->
+
+        <button type="button" class="btn-top"><img src="./images/icon-up.png" alt="btn-top" /></button>
     </body>
 </html>
