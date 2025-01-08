@@ -1,0 +1,275 @@
+@charset 'utf-8';
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --main-color: #b73230;
+    --sub-color: #221e1f;
+    --text-color: #000;
+    --bg-color: #fcc606;
+    --rds: 2.4rem;
+}
+
+::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+
+hr,
+.hidden {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer; /* cup */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+img {
+    max-width: 100%; /* maxw */
+}
+
+body {
+    font: 1.6rem/1.5 'Inter', 'Pretendard', sans-serif;
+    word-break: keep-all;
+}
+
+.inner {
+    width: 144rem;
+    margin: 0 auto;
+    background: rgba(255, 255, 0, 0.1);
+}
+
+/* //e: style.common */
+
+#header {
+    width: 100%;
+}
+
+/* //e: header */
+
+/* s: order */
+.order {
+    background: var(--main-color);
+}
+
+.order .inner {
+    padding: 10rem 8rem;
+}
+
+.order-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-list li {
+    width: 36rem;
+    height: 20rem;
+    background: #fff;
+    border-radius: var(--rds);
+    padding: 2.4rem;
+
+    text-align: center;
+}
+
+.order-list li a {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.order-list li a::before {
+    content: '';
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    background: no-repeat 50%;
+    margin: 0 auto;
+    margin-bottom: 1.6rem;
+}
+
+.order-list li:nth-child(1) a::before {
+    background-image: url(../images/icon-order1.png);
+}
+.order-list li:nth-child(2) a::before {
+    background-image: url(../images/icon-order2.png);
+}
+.order-list li:nth-child(3) a::before {
+    background-image: url(../images/icon-order3.png);
+}
+/* //e: order */
+
+/* s: footer */
+#footer {
+    background: var(--sub-color);
+    color: #fff;
+}
+
+#footer .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 15rem 0;
+}
+
+#footer .foot-logo {
+}
+
+#footer .foot-text {
+}
+
+.foot-link {
+    display: flex;
+    margin-left: -20px;
+}
+
+.foot-link li a {
+    font-size: 1.8rem;
+    position: relative; /* foot-link li::after의 기준  */
+    padding: 0 2rem;
+}
+
+.foot-link li a::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 1.4rem;
+    background: #fff;
+    opacity: 0.3;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%); /* trfty */
+    margin-left: -2rem;
+}
+
+.foot-link li:last-child a::after {
+    display: none;
+}
+
+.copyright {
+    margin-top: 8rem;
+    /* margin-left: -2rem; */
+}
+
+/* .copyright p {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.copyright p::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 1rem;
+    background: #fff;
+    opacity: 0.3;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+} */
+
+.copyright-top {
+    display: flex;
+
+    font-size: 1.4rem;
+    margin-left: -2rem;
+}
+
+.copyright-top p {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.copyright-top p::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 1rem;
+    background: #fff;
+    opacity: 0.3;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.copyright-top p + p + p::after {
+    display: none;
+}
+
+.copyright-mid {
+    display: flex;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    font-weight: 300;
+    margin-left: -2rem;
+}
+
+.copyright-mid p {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.copyright-mid p::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 1rem;
+    background: #fff;
+    opacity: 0.3;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.copyright-mid p + p::after {
+    display: none;
+}
+
+.copyright-bottom {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    color: #969696;
+    font-weight: 300;
+}
+
+.foot-con {
+    margin-top: 20rem;
+}
+
+.foot-sns {
+    display: flex;
+    gap: 3rem;
+}
+
+.foot-sns li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #fff;
+}
