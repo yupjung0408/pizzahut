@@ -3,12 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Pizza Hut test</title>
+        <title>Pizza Hut</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+        <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
         <link rel="stylesheet" href="./css/style.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body>
+        <a href="#header" class="hidden">헤더 바로가기</a>
         <a href="#main" class="hidden">본문 바로가기</a>
         <hr />
         <!-- s: header -->
@@ -77,7 +86,57 @@
         <main id="main">
             <section class="visual">
                 <h2 class="hidden">메인 비주얼</h2>
-                <figure><img src="./images/1920_800.png" alt="메인 비주얼" /></figure>
+                <!-- <figure><img src="./images/1920_800.png" alt="메인 비주얼" /></figure> -->
+
+                <!-- Swiper -->
+                <div class="swiper visual-slider">
+                    <div class="swiper-wrapper visual-wrapper">
+                        <div class="swiper-slide visual-slide">
+                            <figure><img src="./images/1920_800.png" alt="메인 비주얼" /></figure>
+                        </div>
+                        <div class="swiper-slide visual-slide">
+                            <iframe
+                                width="1920"
+                                height="800"
+                                src="https://www.youtube.com/embed/9kunujPZFQ8?si=EpvrO5cPLDEGDOKo&amp;controls=0&amp;autoplay=1&amp;mute=1"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+
+                        <div class="swiper-slide visual-slide">
+                            <iframe
+                                width="1920"
+                                height="800"
+                                src="https://www.youtube.com/embed/_5GOosI6Lz8?si=SSf2a8fwLZ3gHqTF&amp;controls=0&amp;autoplay=1&amp;mute=1"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+
+                        <div class="swiper-slide visual-slide">
+                            <iframe
+                                width="1920"
+                                height="800"
+                                src="https://www.youtube.com/embed/Yl6gYRSWLo4?si=SfHM-LyQsN5vDADU&amp;controls=0&amp;autoplay=1&amp;mute=1"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next visual-slider-button-next"></div>
+                    <div class="swiper-button-prev visual-slider-button-prev"></div>
+                    <div class="swiper-pagination visual-slider-pagination"></div>
+                </div>
+
+                <!-- Swiper JS -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
             </section>
 
             <!-- //e: 메인 비주얼 -->
@@ -159,7 +218,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="#" class="more">VIEW MORE</a>
+                    <a href="#" class="more" data-aos="fade-down" data-aos-delay="100">VIEW MORE</a>
                 </div>
             </section>
             <!-- //e: 메뉴 소개 -->
@@ -179,7 +238,7 @@
                 </div>
 
                 <div class="inner">
-                    <ol class="brand-info-history">
+                    <ol class="brand-info-history" data-aos="fade-down" data-aos-delay="300">
                         <li>
                             <figure><img src="./images/img_circle_1985.jpg" alt="#" /></figure>
                             <p>최초로 <br />국내에 <br />피자 문화 보급</p>
@@ -220,48 +279,99 @@
                     <h3>NEWS</h3>
 
                     <!-- swiper.js -->
+                    <!-- Swiper -->
+                    <div class="swiper news-slider">
+                        <div class="swiper-wrapper news-wrapper">
+                            <div class="swiper-slide news-slide">
+                                <ul class="news-list">
+                                    <li>
+                                        <a href="#">
+                                            <figure><img src="./images/news-pic1.png" alt="#" /></figure>
 
-                    <ul class="news-list">
-                        <li>
-                            <a href="#">
-                                <figure><img src="./images/news-pic1.png" alt="#" /></figure>
+                                            <div class="news-text">
+                                                <strong
+                                                    >피자헛,프리미엄 피자 찾아 우주로 <br />
+                                                    ...SF 영화 같은 광고</strong
+                                                >
+                                                <p>2024.12.20</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <figure><img src="./images/news-pic2.png" alt="#" /></figure>
 
-                                <div class="news-text">
-                                    <strong
-                                        >피자헛,프리미엄 피자 찾아 우주로 <br />
-                                        ...SF 영화 같은 광고</strong
-                                    >
-                                    <p>2024.12.20</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <figure><img src="./images/news-pic2.png" alt="#" /></figure>
+                                            <div class="news-text">
+                                                <strong>
+                                                    피자헛, 태국 대표 요리를 그대로... <br />
+                                                    ‘푸팟퐁커리 피자’ 출...
+                                                </strong>
+                                                <p>2024.11.20</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <figure><img src="./images/news-pic3.png" alt="#" /></figure>
 
-                                <div class="news-text">
-                                    <strong>
-                                        피자헛, 태국 대표 요리를 그대로... <br />
-                                        ‘푸팟퐁커리 피자’ 출...
-                                    </strong>
-                                    <p>2024.11.20</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <figure><img src="./images/news-pic3.png" alt="#" /></figure>
+                                            <div class="news-text">
+                                                <strong
+                                                    >피자헛, 통새우 30마리 들어간 <br />
+                                                    ‘케이준 더블쉬림프 포켓’ ...</strong
+                                                >
+                                                <p>2024.10.11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide news-slide">
+                                <ul class="news-list">
+                                    <li>
+                                        <a href="#">
+                                            <figure><img src="./images/news-pic4.png" alt="#" /></figure>
 
-                                <div class="news-text">
-                                    <strong
-                                        >피자헛, 통새우 30마리 들어간 <br />
-                                        ‘케이준 더블쉬림프 포켓’ ...</strong
-                                    >
-                                    <p>2024.10.11</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                                            <div class="news-text">
+                                                <strong
+                                                    >“엣지 맛집 피자헛, 엣지에 빠삭하다!” <br />피자헛, 바삭한
+                                                    식...</strong
+                                                >
+                                                <p>2024.10.2</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <figure><img src="./images/news-pic5.jpg" alt="#" /></figure>
+
+                                            <div class="news-text">
+                                                <strong
+                                                    >“토핑부터 엣지까지 모두 반반으로 즐긴다!” 피자헛, 신제품...
+                                                </strong>
+                                                <p>2024.9.17</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <figure><img src="./images/news-pic6.png" alt="#" /></figure>
+
+                                            <div class="news-text">
+                                                <strong
+                                                    >“’아보카도’에 빠진 외식업계” 외식업계, <br />
+                                                    ‘아보카도 홀릭...</strong
+                                                >
+                                                <p>2024.8.26</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next news-slider-button-next"></div>
+                        <div class="swiper-button-prev news-slider-button-prev"></div>
+                        <div class="swiper-pagination news-slider-pagination"></div>
+                    </div>
                 </div>
             </section>
             <!-- //e: 뉴스 -->
@@ -311,6 +421,10 @@
         </footer>
         <!-- //e: footer -->
 
-        <button type="button" class="btn-top"><img src="./images/icon-up.png" alt="btn-top" /></button>
+        <!-- <button type="button" class="btn-top"><img src="./images/icon-up.svg" alt="btn-top" /></button> -->
+
+        <a href="#header" class="top"><img src="./images/icon-up.svg" alt="top" /></a>
+
+        <script src="./js/script.js"></script>
     </body>
 </html>

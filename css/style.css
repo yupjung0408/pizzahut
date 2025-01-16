@@ -134,6 +134,9 @@ body {
     align-items: center;
 }
 
+.sidebar ul {
+}
+
 .store {
     display: block;
 }
@@ -175,6 +178,58 @@ body {
 
 /* //e: sidebar */
 
+/* s: main */
+
+.visual {
+    width: 100%;
+    height: 80rem;
+}
+
+.visual-slider {
+    height: 100%;
+}
+
+.visual-slide {
+    height: 100%;
+}
+
+.visual-slide figure {
+    width: 100%;
+    height: 100%;
+}
+.visual-slide figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0; /* obp */
+}
+
+.visual-slider-button-next {
+    color: #fff;
+}
+
+.visual-slider-button-prev {
+    color: #fff;
+}
+
+.swiper-pagination {
+    background: var(--sub-color);
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 600;
+    gap: 10px;
+    border-radius: 50px;
+    width: 13rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* //e: main */
+
 /* s: order */
 .order {
     background: var(--main-color);
@@ -198,6 +253,8 @@ body {
 
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+    position: relative;
 }
 
 .order-list li a {
@@ -213,6 +270,23 @@ body {
     background: no-repeat 50%;
     margin: 0 auto;
     margin-bottom: 1.6rem;
+}
+
+.order-list li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 36rem;
+    height: 20rem;
+    border-radius: 24px;
+    opacity: 0;
+
+    transition: 0.4em;
+
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .order-list li:nth-child(1) a::before {
@@ -251,6 +325,23 @@ body {
     margin-top: 12rem;
 }
 
+.bestmenu-list .pizza a figure::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5) url(../images/icon-search-menu.svg) no-repeat 50%;
+
+    transition: 0.4s;
+    backdrop-filter: blur(2px);
+
+    opacity: 0;
+}
+
 .bestmenu-list .pizza {
     /* border: 1px solid #000; */
     display: flex;
@@ -264,14 +355,17 @@ body {
 .bestmenu-list li figure {
     width: 71rem;
     height: 50rem;
-    border-radius: 6%;
+    border-radius: 30px;
     overflow: hidden;
+    position: relative;
 }
 
 .bestmenu-list li figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    transition: 0.4s;
 }
 
 .bestmenu-info {
@@ -339,6 +433,8 @@ body {
     margin-top: 15rem;
     border-radius: 50px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+    transition: 0.4s;
 }
 
 .more::before {
@@ -388,7 +484,7 @@ body {
 
 .brand-info-con strong {
     font-weight: 500;
-    font-size: 3.4rem;
+    font-size: 3.6rem;
 }
 
 .brand-info-con h3 {
@@ -399,7 +495,7 @@ body {
 
 .brand-info-con p {
     font-weight: 500;
-    font-size: 3.6rem;
+    font-size: 3rem;
     margin-top: 3rem;
 }
 
@@ -473,7 +569,8 @@ body {
 /* s: news */
 
 .news {
-    padding: 20rem 0;
+    margin-top: 20rem;
+    padding: 15rem 0;
 }
 
 .news .inner {
@@ -521,6 +618,18 @@ body {
 .news-text p {
     margin-top: 2.5rem;
     color: #555;
+}
+
+.news-slider {
+    height: 66rem;
+}
+
+.news-slider-button-next {
+    color: #000;
+}
+
+.news-slider-button-prev {
+    color: #000;
 }
 
 /* e//: news */
@@ -687,7 +796,7 @@ body {
 
 /* s: btn-top */
 
-.btn-top {
+/* .btn-top {
     display: block;
     width: 8rem;
     height: 8rem;
@@ -699,6 +808,60 @@ body {
     bottom: 3%;
     right: 3%;
     z-index: 99;
+    transition: 1s;
+} */
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 8rem;
+    height: 8rem;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    z-index: 99;
+    transition: 1s;
 }
 
 /* //e: top */
+
+/* hover effect */
+
+.order-list li:hover a::after {
+    opacity: 1;
+}
+
+.store:hover {
+    color: var(--sub-color);
+}
+
+.service:hover {
+    color: var(--sub-color);
+}
+
+.top:hover img {
+    scale: 2;
+}
+
+.top:hover {
+    background: rgba(183, 50, 48, 0.8);
+}
+
+.bestmenu-list .pizza a:hover figure::before {
+    opacity: 1;
+}
+
+.bestmenu-list .pizza a:hover figure img {
+    transform: scale(1.2);
+}
+
+.more:hover {
+    background: var(--main-color);
+    color: #fff;
+}
