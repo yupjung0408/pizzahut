@@ -22,6 +22,10 @@ var swiper = new Swiper('.visual-slider', {
 /* news-slider */
 var swiper = new Swiper('.news-slider', {
     loop: true,
+    autoplay: {
+        delay: 3000,
+    },
+    speed: 500,
 
     pagination: {
         el: '.news-slider-pagination',

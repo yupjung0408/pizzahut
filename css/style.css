@@ -1,64 +1,4 @@
 @charset 'utf-8';
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-:root {
-    font-size: 62.5%;
-    --main-color: #b73230;
-    --sub-color: #221e1f;
-    --title-color: #000;
-    --text-color: #111;
-    --bg-color: #fcc606;
-    --rds: 2.4rem;
-}
-
-::selection {
-    background: var(--main-color);
-    color: #fff;
-}
-
-hr,
-.hidden {
-    position: absolute;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-}
-
-button {
-    background-color: transparent;
-    cursor: pointer; /* cup */
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-a:hover {
-    text-decoration: none;
-    color: var(--main-color);
-}
-
-img {
-    max-width: 100%; /* maxw */
-}
-
-body {
-    font: 1.6rem/1.5 'Inter', 'Pretendard', sans-serif;
-    word-break: keep-all;
-    color: var(--text-color);
-}
-
-.inner {
-    width: 144rem;
-    margin: 0 auto;
-    /* background: rgba(255, 255, 0, 0.1); */
-}
-
-/* //e: style.common */
 
 #header {
     width: 100%;
@@ -72,7 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7rem 0;
+    padding: 5.3rem 0;
     border-bottom: 1px solid #dbdbdb;
 }
 
@@ -117,28 +57,38 @@ body {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    right: 3%;
+    right: 2.8%;
     z-index: 99;
+    width: 9rem;
+    /* border: 1px solid #000; */
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.25));
+}
 
+.sidebar::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6rem;
+    height: 0.3rem;
+    background: #fff;
+}
+
+.sidebar a {
+    display: block;
     font-weight: 600;
     color: #fff;
-    width: 9rem;
-    height: 32rem;
-    background: var(--main-color);
-    border-radius: 100px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transition: 0.4s;
+    background: var(--main-color);
+    padding: 4rem 0;
+    border-radius: 100px 100px 0 0;
 }
 
-.sidebar ul {
-}
-
-.store {
-    display: block;
+.sidebar a + a {
+    border-radius: 0 0 100px 100px;
 }
 
 .store::before {
@@ -151,20 +101,6 @@ body {
     margin-bottom: 1rem;
 }
 
-.store::after {
-    content: '';
-    display: block;
-    width: 6rem;
-    height: 0.3rem;
-    background: #fff;
-    margin-top: 5rem;
-}
-
-.service {
-    display: block;
-    /* margin-top: 5rem; */
-}
-
 .service::before {
     content: '';
     display: block;
@@ -173,7 +109,6 @@ body {
     background: url(../images/icon-headset.svg) no-repeat 50%;
     margin: 0 auto;
     margin-bottom: 1rem;
-    margin-top: 5rem;
 }
 
 /* //e: sidebar */
@@ -202,6 +137,12 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: 50% 0; /* obp */
+}
+
+.visual-slide iframe {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
 }
 
 .visual-slider-button-next {
@@ -254,12 +195,15 @@ body {
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 
-    position: relative;
+    /* position: relative; */
+    transition: 0.4s;
 }
 
 .order-list li a {
     font-weight: 700;
     font-size: 2.4rem;
+    width: 100%;
+    height: 100%;
 }
 
 .order-list li a::before {
@@ -272,7 +216,7 @@ body {
     margin-bottom: 1.6rem;
 }
 
-.order-list li a::after {
+/* .order-list li a::after {
     content: '';
     display: block;
     position: absolute;
@@ -286,8 +230,8 @@ body {
 
     transition: 0.4em;
 
-    background: rgba(0, 0, 0, 0.25);
-}
+    background: rgba(0, 0, 0, 0.5);
+} */
 
 .order-list li:nth-child(1) a::before {
     background-image: url(../images/icon-order1.png);
@@ -312,7 +256,7 @@ body {
 
 .bestmenu h2 {
     font-weight: 700;
-    font-size: 10rem;
+    font-size: 7rem;
     text-align: center;
     color: var(--title-color);
 }
@@ -374,9 +318,6 @@ body {
     padding: 2rem 0;
 }
 
-.bestmenu-title {
-}
-
 .bestmenu-title dt {
     font-weight: 700;
     font-size: 5rem;
@@ -385,7 +326,7 @@ body {
 
 .bestmenu-title dt + dt {
     font-weight: 500;
-    font-size: 4.2rem;
+    font-size: 3.4rem;
 }
 
 .bestmenu-title dd {
@@ -580,11 +521,14 @@ body {
     font-weight: 600;
     font-size: 6rem;
     color: #000;
+    margin-left: 10rem;
 }
 
 .news-list {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 9rem;
+    justify-content: center;
     margin-top: 5rem;
 }
 
@@ -791,7 +735,19 @@ body {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    background: #fff;
+    background: #fff no-repeat 50%;
+
+    transition: 0.4s;
+}
+
+.foot-sns li a.facebook {
+    background-image: url(../images/icon-facebook.svg);
+}
+.foot-sns li a.instagram {
+    background-image: url(../images/icon-instagram.svg);
+}
+.foot-sns li a.youtube {
+    background-image: url(../images/icon-youtube.svg);
 }
 
 /* s: btn-top */
@@ -812,13 +768,15 @@ body {
 } */
 
 .top {
+    content: '';
     display: flex;
     justify-content: center;
     align-items: center;
 
     width: 8rem;
     height: 8rem;
-    background: #fff;
+    background: #fff no-repeat 50%;
+    background-image: url(../images/icon-up.svg);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
 
@@ -826,31 +784,31 @@ body {
     bottom: 3%;
     right: 3%;
     z-index: 99;
-    transition: 1s;
+    transition: 0.4s;
 }
 
 /* //e: top */
 
 /* hover effect */
 
-.order-list li:hover a::after {
-    opacity: 1;
+.order-list li:hover {
+    transform: translateY(-5rem);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.8);
 }
 
 .store:hover {
-    color: var(--sub-color);
+    background: var(--sub-color);
+    color: #fff;
 }
 
 .service:hover {
-    color: var(--sub-color);
-}
-
-.top:hover img {
-    scale: 2;
+    background: var(--sub-color);
+    color: #fff;
 }
 
 .top:hover {
-    background: rgba(183, 50, 48, 0.8);
+    background: var(--main-color) url(../images/icon-up-hover.svg) no-repeat 50%;
+    transform: scale(1.2);
 }
 
 .bestmenu-list .pizza a:hover figure::before {
@@ -864,4 +822,16 @@ body {
 .more:hover {
     background: var(--main-color);
     color: #fff;
+}
+
+.foot-sns li:hover .facebook {
+    background: var(--main-color) url(../images/icon-facebook-hover.svg) no-repeat 50%;
+}
+
+.foot-sns li:hover .instagram {
+    background: var(--main-color) url(../images/icon-instagram-hover.svg) no-repeat 50%;
+}
+
+.foot-sns li:hover .youtube {
+    background: var(--main-color) url(../images/icon-youtube-hover.svg) no-repeat 50%;
 }
