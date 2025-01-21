@@ -40,6 +40,10 @@
                                 <a href="#"><img src="./images/icon-my.svg" alt="마이페이지" /></a>
                             </li>
                         </ul>
+
+                        <button type="button" class="btn-menu">
+                            <i class="hidden">메뉴</i>
+                        </button>
                     </div>
 
                     <div class="header-bottom">
@@ -206,7 +210,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="#" class="more" data-aos="fade-down" data-aos-delay="100">VIEW MORE</a>
+                    <a href="#" class="more" data-aos="fade-down" data-aos-delay="50">VIEW MORE</a>
                 </div>
             </section>
             <!-- //e: 메뉴 소개 -->
@@ -226,38 +230,40 @@
                 </div>
 
                 <div class="inner">
-                    <ol class="brand-info-history" data-aos="fade-down" data-aos-delay="300">
-                        <li>
-                            <figure><img src="./images/img_circle_1985.jpg" alt="#" /></figure>
-                            <p>최초로 <br />국내에 <br />피자 문화 보급</p>
-                            <strong>1985</strong>
-                        </li>
-                        <li>
-                            <figure><img src="./images/img_circle_1986.jpg" alt="#" /></figure>
-                            <p>최초로 <br />딜리버리 <br />서비스 시작</p>
-                            <strong>1986</strong>
-                        </li>
-                        <li>
-                            <figure><img src="./images/img_circle_1996.jpg" alt="#" /></figure>
-                            <p>최초로 <br />혁신적인 <br />엣지 피자 제공</p>
-                            <strong>1996</strong>
-                        </li>
-                        <li>
-                            <figure><img src="./images/img_circle_1997.jpg" alt="#" /></figure>
-                            <p>최초로 <br />핫파우치 <br />배달</p>
-                            <strong>1997</strong>
-                        </li>
-                        <li>
-                            <figure><img src="./images/img_circle_2011.jpg" alt="#" /></figure>
-                            <p>최초로 <br />통합 멤버십 <br />출시</p>
-                            <strong>2011</strong>
-                        </li>
-                        <li>
-                            <figure><img src="./images/img_circle_2012.jpg" alt="#" /></figure>
-                            <p>최초로 <br />박스제품 <br />출시</p>
-                            <strong>2012</strong>
-                        </li>
-                    </ol>
+                    <div class="brand-info-history-wrap">
+                        <ol class="brand-info-history" data-aos="fade-down" data-aos-delay="100">
+                            <li>
+                                <figure><img src="./images/img_circle_1985.jpg" alt="#" /></figure>
+                                <p>최초로 <br />국내에 <br />피자 문화 보급</p>
+                                <strong>1985</strong>
+                            </li>
+                            <li>
+                                <figure><img src="./images/img_circle_1986.jpg" alt="#" /></figure>
+                                <p>최초로 <br />딜리버리 <br />서비스 시작</p>
+                                <strong>1986</strong>
+                            </li>
+                            <li>
+                                <figure><img src="./images/img_circle_1996.jpg" alt="#" /></figure>
+                                <p>최초로 <br />혁신적인 <br />엣지 피자 제공</p>
+                                <strong>1996</strong>
+                            </li>
+                            <li>
+                                <figure><img src="./images/img_circle_1997.jpg" alt="#" /></figure>
+                                <p>최초로 <br />핫파우치 <br />배달</p>
+                                <strong>1997</strong>
+                            </li>
+                            <li>
+                                <figure><img src="./images/img_circle_2011.jpg" alt="#" /></figure>
+                                <p>최초로 <br />통합 멤버십 <br />출시</p>
+                                <strong>2011</strong>
+                            </li>
+                            <li>
+                                <figure><img src="./images/img_circle_2012.jpg" alt="#" /></figure>
+                                <p>최초로 <br />박스제품 <br />출시</p>
+                                <strong>2012</strong>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </section>
             <!-- //e: 브랜드 소개 -->
@@ -270,7 +276,7 @@
                     <!-- Swiper -->
                     <div class="swiper news-slider">
                         <div class="swiper-wrapper news-wrapper">
-                            <div class="swiper-slide news-slide">
+                            <!-- <div class="swiper-slide news-slide">
                                 <ul class="news-list">
                                     <li>
                                         <a href="#">
@@ -354,6 +360,96 @@
                                         </a>
                                     </li>
                                 </ul>
+                            </div> -->
+
+                            <div class="swiper-slide news-slide">
+                                <div class="news-list">
+                                    <a href="#">
+                                        <figure><img src="./images/news-pic1.png" alt="#" /></figure>
+                                        <div class="news-text">
+                                            <strong
+                                                >피자헛,프리미엄 피자 찾아 우주로 <br />
+                                                ...SF 영화 같은 광고</strong
+                                            >
+                                            <p>2024.12.20</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide news-slide">
+                                <div class="news-list">
+                                    <a href="#">
+                                        <figure><img src="./images/news-pic2.png" alt="#" /></figure>
+                                        <div class="news-text">
+                                            <strong
+                                                >피자헛,프리미엄 피자 찾아 우주로 <br />
+                                                ...SF 영화 같은 광고</strong
+                                            >
+                                            <p>2024.12.20</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide news-slide">
+                                <div class="news-list">
+                                    <a href="#">
+                                        <figure><img src="./images/news-pic3.png" alt="#" /></figure>
+                                        <div class="news-text">
+                                            <strong
+                                                >피자헛,프리미엄 피자 찾아 우주로 <br />
+                                                ...SF 영화 같은 광고</strong
+                                            >
+                                            <p>2024.12.20</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide news-slide">
+                                <div class="news-list">
+                                    <a href="#">
+                                        <figure><img src="./images/news-pic4.png" alt="#" /></figure>
+                                        <div class="news-text">
+                                            <strong
+                                                >피자헛,프리미엄 피자 찾아 우주로 <br />
+                                                ...SF 영화 같은 광고</strong
+                                            >
+                                            <p>2024.12.20</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide news-slide">
+                                <div class="news-list">
+                                    <a href="#">
+                                        <figure><img src="./images/news-pic5.jpg" alt="#" /></figure>
+                                        <div class="news-text">
+                                            <strong
+                                                >피자헛,프리미엄 피자 찾아 우주로 <br />
+                                                ...SF 영화 같은 광고</strong
+                                            >
+                                            <p>2024.12.20</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide news-slide">
+                                <div class="news-list">
+                                    <a href="#">
+                                        <figure><img src="./images/news-pic6.png" alt="#" /></figure>
+                                        <div class="news-text">
+                                            <strong
+                                                >피자헛,프리미엄 피자 찾아 우주로 <br />
+                                                ...SF 영화 같은 광고</strong
+                                            >
+                                            <p>2024.12.20</p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-button-next news-slider-button-next"></div>
@@ -375,7 +471,9 @@
                     <ul class="foot-link">
                         <li><a href="#">이용약관</a></li>
                         <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">대표번호 1588-5588(운영시간 10:30 ~ 22:00)</a></li>
+                        <li>
+                            <a href="#">대표번호 1588-5588<i class="time">(운영시간 10:30 ~ 22:00)</i></a>
+                        </li>
                     </ul>
                     <div class="copyright">
                         <div class="copyright-top">

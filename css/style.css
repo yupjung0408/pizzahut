@@ -26,9 +26,6 @@
     height: 4rem;
 }
 
-.header-bottom {
-}
-
 .gnb {
     display: flex;
     padding: 0 9rem;
@@ -48,6 +45,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn-menu {
+    display: none;
 }
 
 /* //e: header */
@@ -114,6 +115,10 @@
 /* //e: sidebar */
 
 /* s: main */
+
+#main {
+    width: 100%;
+}
 
 .visual {
     width: 100%;
@@ -187,10 +192,10 @@
 
 .order-list li {
     width: 36rem;
+    width: 28.125%;
     height: 20rem;
     background: #fff;
     border-radius: var(--rds);
-    padding: 2.4rem;
 
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
@@ -200,6 +205,9 @@
 }
 
 .order-list li a {
+    display: block;
+    margin: 0 auto;
+    padding: 2.4rem;
     font-weight: 700;
     font-size: 2.4rem;
     width: 100%;
@@ -237,7 +245,7 @@
     background-image: url(../images/icon-order1.png);
 }
 .order-list li:nth-child(2) a::before {
-    background-image: url(../images/icon-order2.png);
+    background-image: url(../images/icon-order2.svg);
 }
 .order-list li:nth-child(3) a::before {
     background-image: url(../images/icon-order3.png);
@@ -267,6 +275,8 @@
     flex-wrap: wrap;
     gap: 8rem;
     margin-top: 12rem;
+
+    width: 100%;
 }
 
 .bestmenu-list .pizza a figure::before {
@@ -290,6 +300,13 @@
     /* border: 1px solid #000; */
     display: flex;
     gap: 8rem;
+
+    width: 100%;
+}
+
+.bestmenu-list li a {
+    width: 71rem;
+    width: 49.3056%;
 }
 
 .bestmenu-list .pizza:nth-child(2) {
@@ -298,6 +315,7 @@
 
 .bestmenu-list li figure {
     width: 71rem;
+    width: 100%;
     height: 50rem;
     border-radius: 30px;
     overflow: hidden;
@@ -315,6 +333,7 @@
 .bestmenu-info {
     /* background: orange; */
     width: 65rem;
+    width: 49.3056%;
     padding: 2rem 0;
 }
 
@@ -355,6 +374,7 @@
 
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 
 .more {
@@ -381,6 +401,7 @@
 .more::before {
     content: '';
     display: block;
+    margin-right: 0.6rem;
 
     width: 2.1rem;
     height: 2.1rem;
@@ -390,9 +411,6 @@
 /* //e: bestmenu */
 
 /* s: brand */
-
-.brand {
-}
 
 .brand-info {
     background: url(../images/info-dim.png) no-repeat 50%;
@@ -421,6 +439,7 @@
     transform: translate(-50%, -50%);
 
     z-index: 1;
+    width: 100%;
 }
 
 .brand-info-con strong {
@@ -440,17 +459,27 @@
     margin-top: 3rem;
 }
 
-.brand .inner {
-}
-
 .brand-info-history {
     margin-top: 10rem;
     display: flex;
     justify-content: space-between;
 }
 
+.brand-info-history-wrap {
+}
+
+.brand-info-history li {
+    width: 20rem;
+    width: 13.8889%;
+    height: 25.5rem;
+    text-align: center;
+
+    position: relative;
+}
+
 .brand-info-history figure {
     width: 20rem;
+    width: 100%;
     height: 20rem;
     position: relative;
 }
@@ -459,14 +488,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.brand-info-history li {
-    width: 20rem;
-    height: 25.5rem;
-    text-align: center;
-
-    position: relative;
 }
 
 .brand-info-history p {
@@ -510,38 +531,50 @@
 /* s: news */
 
 .news {
-    margin-top: 20rem;
-    padding: 15rem 0;
-}
-
-.news .inner {
+    padding: 20rem 0;
 }
 
 .news h3 {
     font-weight: 600;
     font-size: 6rem;
     color: #000;
-    margin-left: 10rem;
 }
 
-.news-list {
+/* .news-list {
     display: flex;
-    /* justify-content: space-between; */
     gap: 9rem;
     justify-content: center;
     margin-top: 5rem;
+    } */
+
+.news-wrapper {
 }
 
-.news-list li {
+.swiper-wrapper {
+    justify-content: space-between;
+}
+
+.news-slider {
+    height: 66rem;
+}
+
+.news-slide {
     width: 35rem;
     height: 50rem;
 }
 
-.news-list li figure {
+.news-list {
+    margin-top: 5rem;
     width: 35rem;
+    height: 50rem;
+}
+
+.news-list figure {
+    width: 35rem;
+    width: 100%;
     height: 35rem;
 }
-.news-list li figure img {
+.news-list figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -549,6 +582,7 @@
 
 .news-text {
     width: 35rem;
+    width: 100%;
     height: 15rem;
     border: 1px solid #dbdbdb;
     padding: 1.5rem 2rem;
@@ -562,10 +596,6 @@
 .news-text p {
     margin-top: 2.5rem;
     color: #555;
-}
-
-.news-slider {
-    height: 66rem;
 }
 
 .news-slider-button-next {
@@ -582,12 +612,12 @@
 #footer {
     background: var(--sub-color);
     color: #fff;
+    padding: 15rem 0;
 }
 
 #footer .inner {
     display: flex;
     justify-content: space-between;
-    padding: 15rem 0;
 }
 
 #footer .foot-logo {
@@ -628,27 +658,7 @@
 
 .copyright {
     margin-top: 8rem;
-    /* margin-left: -2rem; */
 }
-
-/* .copyright p {
-    position: relative;
-    padding: 0 2rem;
-}
-
-.copyright p::after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 1rem;
-    background: #fff;
-    opacity: 0.3;
-
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-} */
 
 .copyright-top {
     display: flex;
@@ -750,22 +760,7 @@
     background-image: url(../images/icon-youtube.svg);
 }
 
-/* s: btn-top */
-
-/* .btn-top {
-    display: block;
-    width: 8rem;
-    height: 8rem;
-    background: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-
-    position: fixed;
-    bottom: 3%;
-    right: 3%;
-    z-index: 99;
-    transition: 1s;
-} */
+/* s: top */
 
 .top {
     content: '';
@@ -834,4 +829,478 @@
 
 .foot-sns li:hover .youtube {
     background: var(--main-color) url(../images/icon-youtube-hover.svg) no-repeat 50%;
+}
+
+/* .inner의 크기에 따른 분기점 */
+@media screen and (max-width: 1440px) {
+    .inner {
+        width: 904px;
+        width: 88.2813%;
+    }
+}
+
+/* 태블릿 디자인 */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+    .top {
+        display: none;
+    }
+    .header-bottom {
+        display: none;
+    }
+    .header-con {
+        display: none;
+    }
+
+    #header nav {
+        height: 14rem;
+    }
+
+    .header-top {
+        padding: 3.25rem 0;
+    }
+
+    .visual {
+        height: 60rem;
+    }
+
+    .btn-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 6rem;
+        background: url(../images/icon-btn-menu.svg) no-repeat 50%;
+    }
+
+    .order .inner {
+        padding: 10rem 0;
+    }
+
+    .order-list li {
+        width: 28.8rem;
+        width: 31.8584%;
+        height: 18rem;
+    }
+
+    .order-list li a {
+        font-size: 2rem;
+    }
+
+    .bestmenu-list .pizza {
+        gap: 4rem;
+    }
+
+    .bestmenu-list li a {
+        width: 44.2rem;
+        width: 48.8938%;
+    }
+
+    .bestmenu-list li figure {
+        width: 100%;
+        height: 32rem;
+    }
+
+    .bestmenu-info {
+        width: 44.2rem;
+        width: 48.8938%;
+    }
+
+    .bestmenu-info dt {
+        font-size: 3rem;
+    }
+    .bestmenu-info dt + dt {
+        font-size: 2.6rem;
+    }
+    .bestmenu-info dd {
+        font-size: 2rem;
+    }
+    .price {
+        gap: 5rem;
+    }
+    .price li {
+        font-size: 1.6rem;
+    }
+    .price li em {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .brand-info {
+        padding: 6rem 0;
+        height: 40rem;
+    }
+    .brand-info strong {
+        font-size: 3.2rem;
+    }
+    .brand-info h3 {
+        font-size: 6rem;
+    }
+    .brand-info p {
+        font-size: 2.4rem;
+        margin-top: 2rem;
+    }
+
+    .brand-info-history-wrap {
+        overflow-x: scroll; /* ovxs */
+    }
+
+    .brand-info-history {
+        gap: 5rem;
+    }
+
+    .brand-info-history li {
+        width: 18rem;
+        width: 19.9115%;
+        height: 23.2rem;
+        flex-shrink: 0;
+    }
+
+    .brand-info-history figure {
+        width: 18rem;
+        width: 100%;
+        height: 18rem;
+    }
+
+    .brand-info-history p {
+        font-size: 2rem;
+
+        width: 18rem;
+        width: 100%;
+        height: 18rem;
+        opacity: 1;
+    }
+
+    .brand-info-history strong {
+        font-size: 2.4rem;
+    }
+
+    /* //e: 브랜드 소개 */
+
+    /* s: news */
+
+    .news {
+        padding: 15rem 0;
+    }
+
+    .news h3 {
+        font-size: 4rem;
+        margin-left: 10rem;
+    }
+
+    .news-list {
+        gap: 6rem;
+        margin-top: 4rem;
+    }
+
+    .news-list li {
+        width: 35rem;
+        width: 24.3056%;
+        height: 50rem;
+    }
+
+    .news-list li figure {
+        width: 35rem;
+        width: 100%;
+        height: 35rem;
+    }
+    .news-list li figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .news-text {
+        width: 35rem;
+        width: 100%;
+        height: 15rem;
+        border: 1px solid #dbdbdb;
+        padding: 1.5rem 2rem;
+    }
+
+    .news-slider {
+        height: 66rem;
+    }
+
+    .news-slider-button-next {
+        color: #000;
+    }
+
+    .news-slider-button-prev {
+        color: #000;
+    }
+
+    /* e//: news */
+
+    #footer {
+        padding: 8rem 0;
+    }
+
+    #footer .inner {
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .foot-text {
+        margin-top: 5rem;
+    }
+
+    .foot-link {
+        justify-content: center;
+    }
+
+    .foot-link li a::after {
+    }
+
+    .foot-con {
+        margin-top: 4.5rem;
+    }
+
+    .copyright {
+        margin-top: 4rem;
+        justify-content: center;
+    }
+
+    .copyright-top {
+        justify-content: center;
+    }
+
+    .copyright-mid {
+        justify-content: center;
+    }
+
+    .copyright-mid p::after {
+    }
+
+    .foot-link li a {
+        font-size: 1.6rem;
+    }
+
+    .foot-link li a::after {
+        height: 1.2rem;
+    }
+}
+
+/* 모바일 디자인 */
+@media screen and (max-width: 375px) {
+    .inner {
+        width: 335px;
+        width: 89.3333%;
+    }
+
+    .btn-menu {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .visual {
+        height: 40rem;
+    }
+
+    .swiper-pagination {
+        width: 8.4rem;
+        height: 3.2rem;
+        font-size: 1.4rem;
+    }
+
+    .order .inner {
+        padding: 6rem 0;
+    }
+
+    .order-list {
+    }
+
+    .order-list li {
+        width: 11rem;
+    }
+
+    .order-list li a {
+        font-size: 2rem;
+    }
+
+    .order-list li a::before {
+        content: '';
+        display: block;
+        width: 6rem;
+        height: 6rem;
+        background: no-repeat 50% / contain;
+        margin: 0 auto;
+        margin-bottom: 2.4rem;
+    }
+
+    .bestmenu h2 {
+        font-size: 4.2rem;
+    }
+
+    .bestmenu-list {
+        gap: 4rem;
+    }
+
+    .bestmenu-list .pizza {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bestmenu-list .pizza:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .bestmenu-list li a {
+        width: 31.5rem;
+    }
+
+    .bestmenu-list li figure {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .bestmenu-info {
+        width: 31.5rem;
+        height: 14rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .bestmenu-info dt {
+        font-size: 2.2rem;
+    }
+    .bestmenu-info dt + dt {
+        display: none;
+    }
+    .bestmenu-info dd {
+        font-size: 1.6rem;
+    }
+
+    .bestmenu-title > dd {
+        margin-top: 1rem;
+    }
+
+    .bestmenu-title > dd + dd {
+        margin-top: 1rem;
+    }
+
+    .price {
+        margin-top: 2rem;
+        gap: 2.5rem;
+        justify-content: center;
+    }
+    .price li {
+        font-size: 1.4rem;
+    }
+    .price li em {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .more {
+        width: 16rem;
+        height: 4.8rem;
+        font-size: 1.6rem;
+    }
+
+    .more::before {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .brand-info {
+        height: 30rem;
+    }
+    .brand-info strong {
+        font-size: 2rem;
+    }
+    .brand-info h3 {
+        font-size: 4rem;
+        margin-top: 1rem;
+    }
+    .brand-info p {
+        font-size: 1.6rem;
+    }
+
+    .brand-info-history {
+        gap: 2.8rem;
+        margin-top: 6rem;
+    }
+
+    .brand-info-history li {
+        width: 13rem;
+
+        height: 16.7rem;
+        flex-shrink: 0;
+    }
+
+    .brand-info-history figure {
+        width: 13rem;
+        width: 100%;
+        height: 13rem;
+    }
+
+    .brand-info-history p {
+        font-size: 1.4rem;
+
+        width: 13rem;
+        width: 100%;
+        height: 13rem;
+    }
+
+    .brand-info-history strong {
+        font-size: 1.8rem;
+    }
+
+    /* //e: 브랜드 소개 */
+
+    .news {
+        padding: 15rem 0;
+    }
+
+    #footer {
+        padding: 7rem 0;
+    }
+
+    .time {
+        display: none;
+    }
+
+    .foot-text {
+        margin-top: 3rem;
+    }
+
+    .foot-link {
+    }
+
+    .foot-link li a {
+        font-size: 1.2rem;
+    }
+
+    .foot-con {
+        margin-top: 4rem;
+    }
+
+    .copyright {
+        margin-top: 3rem;
+    }
+
+    .copyright-top {
+        display: none;
+    }
+
+    .copyright-mid {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .copyright-bottom {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .foot-sns li a {
+        width: 4rem;
+        height: 4rem;
+    }
 }
