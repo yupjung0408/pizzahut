@@ -39,17 +39,22 @@ var swiper = new Swiper('.news-slider', {
 
     // 모바일의 세팅으로 시작
     slidesPerView: 1,
+    slidesPerGroup: 1,
     // spaceBetween: 20,
 
     // 반응형 분기점
     breakpoints: {
         // 375픽셀 이상
-        375: {
+        380: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 100,
         },
-        // 1024픽셀 이상
-        1024: {
+        // 1025픽셀 이상
+        1025: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 80,
         },
     },
 });
