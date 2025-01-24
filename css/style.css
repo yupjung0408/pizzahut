@@ -1102,6 +1102,18 @@
         height: 40rem;
     }
 
+    .visual-slide figure {
+        width: 100%;
+        height: 100%;
+    }
+
+    .visual-slide iframe {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: top;
+    }
+
     .swiper-pagination {
         width: 8.4rem;
         height: 3.2rem;

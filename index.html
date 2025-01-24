@@ -90,7 +90,13 @@
                 <div class="swiper visual-slider">
                     <div class="swiper-wrapper visual-wrapper">
                         <div class="swiper-slide visual-slide">
-                            <figure><img src="./images/1920_800.png" alt="메인 비주얼" /></figure>
+                            <figure>
+                                <picture>
+                                    <source media="(max-width: 500px )" srcset="./images/375_400.jpg" />
+                                    <source media="(max-width: 1024px )" srcset="./images/1024_600.png" />
+                                    <img src="./images/1920_800.png" alt="메인 비주얼"
+                                /></picture>
+                            </figure>
                         </div>
                         <div class="swiper-slide visual-slide">
                             <iframe

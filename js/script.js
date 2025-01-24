@@ -45,13 +45,13 @@ var swiper = new Swiper('.news-slider', {
     // 반응형 분기점
     breakpoints: {
         // 375픽셀 이상
-        380: {
+        376: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 100,
         },
         // 1025픽셀 이상
-        1025: {
+        1440: {
             slidesPerView: 3,
             slidesPerGroup: 3,
             spaceBetween: 80,
