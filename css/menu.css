@@ -296,6 +296,10 @@
 
 /* 태블릿 디자인 */
 @media screen and (max-width: 1024px) {
+    #main {
+        padding-top: 14rem;
+    }
+
     .menu h2 {
         margin-top: 5rem;
         font-size: 4rem;
@@ -340,6 +344,10 @@
 
     /* 모바일 디자인 */
     @media screen and (max-width: 375px) {
+        #main {
+            padding-top: 13rem;
+        }
+
         .menu {
             padding: 5rem 0;
         }

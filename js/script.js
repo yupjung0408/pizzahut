@@ -64,14 +64,15 @@ $(function () {
         // 마지막 스크롤 값을 갱신
         lastScrollTop = scrollTop;
     });
+    // e: GNB
 
     /* visual-slider */
     var swiper = new Swiper('.visual-slider', {
         loop: true, // 반복 */
-        // autoplay: {
-        //     delay: 10000,
-        // },
-        // speed: 1000,
+        autoplay: {
+            delay: 10000,
+        },
+        speed: 1000,
 
         pagination: {
             el: '.visual-slider-pagination',

@@ -520,6 +520,10 @@
 
 /* 태블릿 디자인 */
 @media screen and (max-width: 1024px) {
+    #main {
+        padding-top: 14rem;
+    }
+
     .visual {
         height: 60rem;
     }
@@ -682,6 +686,10 @@
 
 /* 모바일 디자인 */
 @media screen and (max-width: 375px) {
+    #main {
+        padding-top: 13rem;
+    }
+
     .visual {
         height: 40rem;
     }
