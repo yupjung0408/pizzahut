@@ -4,9 +4,9 @@ $(function () {
     // GNB
     // 대상을 변수에 저장
     const $window = $(window);
-    const $header = $('header');
-    const $subMenu = $('.submenu');
-    const $menu = $('.gnb > li');
+    const $header = $("header");
+    const $subMenu = $(".submenu");
+    const $menu = $(".gnb > li");
     const duration = 300;
     console.log($menu);
 
@@ -14,31 +14,31 @@ $(function () {
 
     function toggleHeaderVisibility(isVisible) {
         if (isVisible) {
-            $header.removeClass('hide');
+            $header.removeClass("hide");
         } else {
-            $header.addClass('hide');
+            $header.addClass("hide");
         }
     }
 
     // 메뉴 영역에 마우스가 들어오면(event: mouseenter)
-    $menu.on('mouseenter', function () {
+    $menu.on("mouseenter", function () {
         // 그 영역 하위 요소 중에서 submenu 찾아서 슬라이드 다운
         $(this).find($subMenu).stop().slideDown(duration);
         // $subMenu.slideDown(duration); // 모든 서브메뉴 떨어뜨리기
 
         // 메뉴 활성화 표시: on클래스 부여
-        $(this).addClass('on');
+        $(this).addClass("on");
     });
 
     // 메뉴 영역에 마우스가 나가면
-    $menu.on('mouseleave', function () {
+    $menu.on("mouseleave", function () {
         // submenu 찾아서 슬라이드 업
         $subMenu.stop().slideUp(duration);
-        $menu.removeClass('on');
+        $menu.removeClass("on");
     });
 
     // 마우스 휠을 조작했을 때
-    $window.on('wheel', (e) => {
+    $window.on("wheel", (e) => {
         // console.log(e);
 
         if (e.originalEvent.deltaY < 0) {
@@ -50,7 +50,7 @@ $(function () {
     });
 
     // 스크롤 이벤트가 일어나면
-    $window.on('scroll', () => {
+    $window.on("scroll", () => {
         const scrollTop = $window.scrollTop();
         console.log(scrollTop);
 
@@ -67,26 +67,26 @@ $(function () {
     // e: GNB
 
     /* visual-slider */
-    var swiper = new Swiper('.visual-slider', {
+    var swiper = new Swiper(".visual-slider", {
         loop: true, // 반복 */
-        autoplay: {
-            delay: 10000,
-        },
-        speed: 1000,
+        // autoplay: {
+        //     delay: 10000,
+        // },
+        // speed: 1000,
 
         pagination: {
-            el: '.visual-slider-pagination',
-            type: 'fraction',
+            el: ".visual-slider-pagination",
+            type: "fraction",
             clickable: true,
         },
         navigation: {
-            nextEl: '.visual-slider-button-next',
-            prevEl: '.visual-slider-button-prev',
+            nextEl: ".visual-slider-button-next",
+            prevEl: ".visual-slider-button-prev",
         },
     });
 
     /* news-slider */
-    var swiper = new Swiper('.news-slider', {
+    var swiper = new Swiper(".news-slider", {
         loop: true,
         // autoplay: {
         //     delay: 3000,
@@ -94,13 +94,13 @@ $(function () {
         // speed: 500,
 
         pagination: {
-            el: '.news-slider-pagination',
-            type: 'fraction',
+            el: ".news-slider-pagination",
+            type: "fraction",
             clickable: true,
         },
         navigation: {
-            nextEl: '.news-slider-button-next',
-            prevEl: '.news-slider-button-prev',
+            nextEl: ".news-slider-button-next",
+            prevEl: ".news-slider-button-prev",
         },
 
         // 모바일의 세팅으로 시작
